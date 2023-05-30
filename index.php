@@ -18,7 +18,8 @@
 	<ul id = "menu">
 		<li><a href = "index.php">Home</a></li> |
 		<li><a href = "reservation.php">Rooms</a></li> |
-		<li><a href = "aboutus.php">About</a></li> 
+		<li><a href = "aboutus.php">About</a></li> |
+		<li><a href = "saldo.php">Saldo</a></li> 
 	</ul>
 	<div id="myCarousel" class="carousel slide container-fluid" data-ride="carousel">
 		<ol class="carousel-indicators">

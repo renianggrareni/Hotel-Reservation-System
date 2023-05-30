@@ -48,13 +48,13 @@
             <div class="container text-center">
                 <h1 class="heading-1">Layanan Hotel & Penerbangan</h1>
                 <p class="para-1">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    Selamat datanmg diaplikasi website booking hotel dan pesawat.
                 </p>
 
                 <div class="row justify-content-center text-center">
                     <div class="col-md-4" id="pesan">
                         <div class="card">
-                            <img src="./images/hotel (1).png" alt="image" class="card-image-top" />
+                            <img src="./images/hotel.webp" alt="image" class="card-image-top" />
                             <div class="card-body">
                                 <h4 class="card-title">Hotel</h4>
                                 <p class="card-text"></p>
@@ -65,7 +65,7 @@
                 
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="./images/pecawat.png" alt="image" class="card-image-top" />
+                            <img src="./images/pesawat.webp" alt="image" class="card-image-top" />
                             <div class="card-body">
                                 <h4 class="card-title">Pesawat</h4>
                                 <p class="card-text"></p>

@@ -21,7 +21,7 @@
 				<li class = "dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class = "glyphicon glyphicon-user"></i> <?php echo $name;?></a>
 					<ul class="dropdown-menu">
-						<li><a href="logout.php"><i class = "glyphicon glyphicon-off"></i> Logout</a></li>
+						<li><a href="logout.php"><i class = "glyphicon glyphicon-off"></i>Logout</a></li>
 					</ul>
 				</li>
 			</ul>

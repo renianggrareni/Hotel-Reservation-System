@@ -81,7 +81,7 @@
 							<td><?php echo "<label style = 'color:#ff0000;'>".date("M d, Y", strtotime($fetch['checkin']."+".$fetch['days']."DAYS"))."</label>"." @ "."<label>".date("h:i A", strtotime($fetch['checkout_time']))."</label>"?></td>
 							<td><?php echo $fetch['status']?></td>
 							<td><?php if($fetch['extra_bed'] == "0"){ echo "None";}else{echo $fetch['extra_bed'];}?></td>
-							<td><?php echo "USD ".$fetch['bill'].".00"?></td>
+							<td><?php echo "Rp ".$fetch['bill'].".00"?></td>
 							<td><label class = "">Paid</label></td>
 						</tr>
 						<?php

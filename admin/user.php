@@ -21,7 +21,7 @@
 				<li class = "dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class = "glyphicon glyphicon-user"></i> <?php echo $name;?></a>
 					<ul class="dropdown-menu">
-						<li><a href="logout.php"><i class = "glyphicon glyphicon-off"></i> Logout</a></li>
+						<li><a href="logout.php"><i class = "glyphicon glyphicon-off"></i>Logout</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -41,7 +41,7 @@
 	<div class = "container-fluid">
 		<div class = "panel panel-default">
 			<div class = "panel-body">
-				<div class = "alert alert-info">Accounts</div>
+				<div class = "alert alert-info">User</div>
 				<a class = "btn btn-success" href = "add_account.php"><i class = "glyphicon glyphicon-plus"></i> Create New Account</a>
 				<br />
 				<br />
@@ -56,14 +56,14 @@
 					</thead>
 					<tbody>
 						<?php  
-							$query = $conn->query("SELECT * FROM `admin`") or die(mysqli_error());
+							$query = $conn->query("SELECT * FROM `user`") or die(mysqli_error());
 							while($fetch = $query->fetch_array()){
 						?>
 						<tr>
 							<td><?php echo $fetch['name']?></td>
 							<td><?php echo $fetch['username']?></td>
 							<td><?php echo md5($fetch['password'])?></td>
-							<td><center><a class = "btn btn-warning" href = "edit_account.php?user_id=<?php echo $fetch['user_id']?>"><i class = "glyphicon glyphicon-edit"></i> Edit</a> <a class = "btn btn-danger" onclick = "confirmationDelete(this); return false;" href = "delete_account.php?admin_id=<?php echo $fetch['admin_id']?>"><i class = "glyphicon glyphicon-remove"></i> Delete</a></center></td>
+							<td><center><a class = "btn btn-warning" href = "edit_account.php?user_id=<?php echo $fetch['user_id']?>"><i class = "glyphicon glyphicon-edit"></i>Edit</a> <a class = "btn btn-danger" onclick = "confirmationDelete(this); return false;" href = "delete_account.php?admin_id=<?php echo $fetch['user_id']?>"><i class = "glyphicon glyphicon-remove"></i>Delete</a></center></td>
 						</tr>
 						<?php
 							}

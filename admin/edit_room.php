@@ -31,6 +31,7 @@
 		<ul class = "nav nav-pills">
 			<li><a href = "home.php">Home</a></li>
 			<li><a href = "account.php">Accounts</a></li>
+			<li><a href = "user.php">User</a></li>
 			<li><a href = "mitra.php">Mitra</a></li>
 			<li><a href = "reserve.php">Reservation</a></li>
 			<li><a href = "reserve.php">Reservation</a></li>
@@ -53,11 +54,11 @@
 							<label>Room Type </label>
 							<select class = "form-control" required = required name = "room_type">
 								<option value = "">Choose an option</option>
-								<option value = "Standard" <?php if($fetch['room_type'] == "Standard"){echo "selected";}?>>Standard</option>
-								<option value = "Superior" <?php if($fetch['room_type'] == "Superior"){echo "selected";}?>>Superior</option>
-								<option value = "Super Deluxe" <?php if($fetch['room_type'] == "Super Deluxe"){echo "selected";}?>>Super Deluxe</option>
-								<option value = "Jr. Suite" <?php if($fetch['room_type'] == "Jr. Suite"){echo "selected";}?>>Jr. Suite</option>
-								<option value = "Executive Suite" <?php if($fetch['room_type'] == "Executive Suite"){echo "selected";}?>>Executive Suite</option>
+								<option value = "Platinum" <?php if($fetch['room_type'] == "Platinum"){echo "selected";}?>>Platinum</option>
+								<option value = "Astara" <?php if($fetch['room_type'] == "Astara"){echo "selected";}?>>Astara</option>
+								<option value = "OYO 1466 Athar 88" <?php if($fetch['room_type'] == "OYO 1466 Athar 88"){echo "selected";}?>>OYO 1466 Athar 88</option>
+								<option value = "Pasific" <?php if($fetch['room_type'] == "Pasific"){echo "selected";}?>>Pasific</option>
+								<option value = "Ibis" <?php if($fetch['room_type'] == "Ibis"){echo "selected";}?>>Ibis</option>
 							</select>
 						</div>
 						<div class = "form-group">

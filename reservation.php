@@ -18,7 +18,8 @@
 	<ul id = "menu">
 		<li><a href = "index.php">Home</a></li> |
 		<li><a href = "reservation.php">Rooms</a></li> |
-		<li><a href = "aboutus.php">About</a></li> 			
+		<li><a href = "aboutus.php">About</a></li> |	
+		<li><a href = "saldo.php">Saldo</a></li>
 	</ul>
 	<div style = "margin-left:0;" class = "container">
 		<div class = "panel panel-default">
@@ -37,7 +38,7 @@
 							<h3><?php echo $fetch['room_type']?></h3>
 							<h4 style = "color:rgb(255,0,0);"><?php echo "Harga: Rp ".$fetch['price'].".00"?></h4>
 							<br /><br /><br /><br /><br /><br />
-							<a style = "margin-left:580px;" href = "add_reserve.php?room_id=<?php echo $fetch['room_id']?>" class = "btn btn-info"><i class = "glyphicon glyphicon-list"></i> Reserve</a>
+							<a style = "margin-left:580px;" href = "add_reserve.php?room_id=<?php echo $fetch['room_id']?>" class = "btn btn-info"><i class = "glyphicon glyphicon-list"></i> Booking</a>
 						</div>
 					</div>
 				<?php

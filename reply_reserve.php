@@ -27,7 +27,7 @@
 				<br />
 				<div class = "col-md-4"></div>
 				<div class = "well col-md-4">
-					<center><h3>Silahkan kunjungi website kembali untuk mendapatkan nomor kamar anda</h3></center>
+					<center><h3>Pesanan Anda sedang dibuat</h3></center>
 					<br />
 					<center><h4>THANK YOU!</h4></center>
 					<br />
