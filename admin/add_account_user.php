@@ -59,10 +59,10 @@
 						</div>
 						<br />
 						<div class = "form-group">
-							<button name = "add_account" class = "btn btn-info form-control"><i class = "glyphicon glyphicon-save"></i> Saved</button>
+							<button name = "add_account_user" class = "btn btn-info form-control"><i class = "glyphicon glyphicon-save"></i> Saved</button>
 						</div>
 					</form>
-					<?php require_once 'add_query_account.php'?>
+					<?php require_once 'add_query_account_user.php'?>
 				</div>
 			</div>
 		</div>

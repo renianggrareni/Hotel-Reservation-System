@@ -1,5 +1,5 @@
 <?php
 	session_start();
-	session_unset(admin_id);
+	session_unset();
 	header("location:index.php");
 ?>

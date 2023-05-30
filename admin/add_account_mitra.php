@@ -30,7 +30,7 @@
 	<div class = "container-fluid">	
 		<ul class = "nav nav-pills">
 			<li><a href = "home.php">Home</a></li>
-			<li class = "active"><a href = "account.php">Accounts</a></li>
+			<li class = "active"><a href =mitra.php">Accounts</a></li>
 			<li><a href = "user.php">User</a></li>
 			<li><a href = "mitra.php">Mitra</a></li>
 			<li><a href = "reserve.php">Reservation</a></li>
@@ -59,10 +59,10 @@
 						</div>
 						<br />
 						<div class = "form-group">
-							<button name = "add_account" class = "btn btn-info form-control"><i class = "glyphicon glyphicon-save"></i> Saved</button>
+							<button name = "add_account_mitra" class = "btn btn-info form-control"><i class = "glyphicon glyphicon-save"></i> Saved</button>
 						</div>
 					</form>
-					<?php require_once 'add_query_account.php'?>
+					<?php require_once 'add_query_account_mitra.php'?>
 				</div>
 			</div>
 		</div>

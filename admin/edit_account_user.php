@@ -41,28 +41,31 @@
 	<div class = "container-fluid">
 		<div class = "panel panel-default">
 			<div class = "panel-body">
-				<div class = "alert alert-info">Account / Create Account</div>
+				<div class = "alert alert-info">Account / Change Account</div>
+				<?php
+					$query = $conn->query("SELECT * FROM `user` WHERE `user_id` = '$_REQUEST[user_id]'") or die(mysqli_error());
+					$fetch = $query->fetch_array();
+				?>
 				<br />
 				<div class = "col-md-4">	
-					<form method = "POST">
+					<form method = "POST" action = "edit_query_account_user.php?user_id=<?php echo $fetch['user_id']?>">
 						<div class = "form-group">
 							<label>Name </label>
-							<input type = "text" class = "form-control" name = "name" />
+							<input type = "text" class = "form-control" value = "<?php echo $fetch['name']?>" name = "name" />
 						</div>
 						<div class = "form-group">
 							<label>Username </label>
-							<input type = "text" class = "form-control" name = "username" />
+							<input type = "text" class = "form-control" value = "<?php echo $fetch['username']?>" name = "username" />
 						</div>
 						<div class = "form-group">
 							<label>Password </label>
-							<input type = "password" class = "form-control" name = "password" />
+							<input type = "password" class = "form-control" value = "<?php echo $fetch['password']?>" name = "password" />
 						</div>
 						<br />
 						<div class = "form-group">
-							<button name = "add_account" class = "btn btn-info form-control"><i class = "glyphicon glyphicon-save"></i> Saved</button>
+							<button name = "edit_account_user" class = "btn btn-warning form-control"><i class = "glyphicon glyphicon-edit"></i> Save Changes</button>
 						</div>
 					</form>
-					<?php require_once 'add_query_account.php'?>
 				</div>
 			</div>
 		</div>
