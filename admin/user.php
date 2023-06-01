@@ -56,7 +56,7 @@
 					</thead>
 					<tbody>
 						<?php  
-							$query = $conn->query("SELECT * FROM `user`") or die(mysqli_error());
+							mysqli_query("SELECT * FROM `user`") or die(mysqli_error());
 							while($fetch = $query->fetch_array()){
 						?>
 						<tr>
