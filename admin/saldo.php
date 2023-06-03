@@ -2,23 +2,23 @@
 session_start();
 
 // Cek apakah pengguna sudah login sebagai admin
-if (!isset($_SESSION['admin'])) {
-    header("Location: login.php");
-    exit();
-}
+// if (!isset($_SESSION['admin'])) {
+//     header("Location: login.php");
+//     exit();
+// }
 
 // Koneksi ke database
 $host = "localhost";
-$username = "username";
-$password = "password";
-$database = "database_name";
+$username = "root";
+$password = "";
+$database = "hotel_db";
 $conn = mysqli_connect($host, $username, $password, $database);
 
 // Ambil ID pengguna dari parameter URL
-$id = $_GET['id'];
+$id = $_GET['user_id'];
 
 // Ambil saldo pengguna
-$query = "SELECT saldo FROM users WHERE id = $id";
+$conn = "SELECT saldo FROM user WHERE id = $id";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
 $saldo = $row['saldo'];

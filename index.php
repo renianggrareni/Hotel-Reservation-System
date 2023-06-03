@@ -19,7 +19,7 @@
 		<li><a href = "index.php">Home</a></li> |
 		<li><a href = "reservation.php">Rooms</a></li> |
 		<li><a href = "aboutus.php">About</a></li> |
-		<li><a href = "saldo.php">Saldo</a></li> 
+		<li><a href = "ADMIN/user_saldo.php">Saldo</a></li> 
 	</ul>
 	<div id="myCarousel" class="carousel slide container-fluid" data-ride="carousel">
 		<ol class="carousel-indicators">
@@ -33,7 +33,7 @@
 		</ol>
 		<div style = "margin:auto;" class="carousel-inner" role="listbox">
 			<div class="item active">
-				<img src="images/a.jpg" style = "width:100%; height:450px;" />
+				<img src="images/GIANTO2.jpg" style = "width:100%; height:450px;" />
 			</div>
 		
 			<div class="item">

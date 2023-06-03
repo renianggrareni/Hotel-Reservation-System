@@ -12,7 +12,9 @@
 			header('location:home.php');
 		}else{
 			echo "<center><labe style = 'color:red;'>Invalid username or password</label></center>";
-			header("location: dashboard.php");
+			session_start();
+			$_SESSION['user_id'] = $fetch['user_id'];
+			header('<location:dashboard.php');
 		}
 	}
 ?>
