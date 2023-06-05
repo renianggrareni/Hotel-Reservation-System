@@ -15,7 +15,7 @@
 	<nav style = "background-color:rgba(0, 0, 0, 0.1);" class = "navbar navbar-default">
 		<div  class = "container-fluid">
 			<div class = "navbar-header">
-				<a class = "navbar-brand" >WBOOKING</a>
+				<a class = "navbar-brand" >Hotel Online Reservation</a>
 			</div>
 			<ul class = "nav navbar-nav pull-right ">
 				<li class = "dropdown">
@@ -29,52 +29,56 @@
 	</nav>
 	<div class = "container-fluid">	
 		<ul class = "nav nav-pills">
-			<li><a href = "home.php">Home</a></li>
+            <li><a href = "home.php">Home</a></li>
 			<li><a href = "account.php">Accounts</a></li>
 			<li><a href = "user.php">User</a></li>
 			<li><a href = "mitra.php">Mitra</a></li>
 			<li><a href = "reserve.php">Reservation</a></li>
 			<li><a href = "room.php">Room</a></li>		
             <li><a href = "flight.php">Flight</a></li>
-			<li><a href = "admin.php">Saldo</a></li>		
+			<li><a href = "admin.php">Saldo</a></li>			
 		</ul>	
 	</div>
 	<br />
 	<div class = "container-fluid">
 		<div class = "panel panel-default">
 			<div class = "panel-body">
-				<div class = "alert alert-info">Transaction / Room / Add Room</div>
+				<div class = "alert alert-info">Transaction / Room / Change Room</div>
 				<br />
-				<div class = "col-md-4">	
+				<div class = "col-md-4">
+					<?php
+						$query = $conn->query("SELECT * FROM `flight` WHERE `flight_id` = '$_REQUEST[flight_id]'") or die(mysqli_error());
+						$fetch = $query->fetch_array();
+					?>
 					<form method = "POST" enctype = "multipart/form-data">
 						<div class = "form-group">
 							<label>Room Type </label>
-							<select class = "form-control" required = required name = "room_type">
+							<select class = "form-control" required = required name = "flight_type">
 								<option value = "">Choose an option</option>
-								<option value = "Platinum">Platinum</option>
-								<option value = "Astara">Astara</option>
-								<option value = "OYO 1466 Athar 88">OYO 1466 Athar 88</option>
-								<option value = "Pacific">Pacific</option>
-								<option value = "Ibis">Ibis</option>
+								<option value = "Lion Air" <?php if($fetch['flight_type'] == "Lion Air"){echo "selected";}?>>Lion Air</option>
+								<option value = "Batik Air" <?php if($fetch['flight_type'] == "Astara"){echo "selected";}?>>Batik Air</option>
+								<option value = "Sriwijaya Air" <?php if($fetch['flight_type'] == "OYO 1466 Athar 88"){echo "selected";}?>>Sriwijaya Air</option>
+								<option value = "Citilink Air" <?php if($fetch['flight_type'] == "Pasific"){echo "selected";}?>>Citilink Air</option>
+								<option value = "Super Air Jet" <?php if($fetch['flight_type'] == "Ibis"){echo "selected";}?>>Super Air Jet</option>
 							</select>
 						</div>
 						<div class = "form-group">
 							<label>Price </label>
-							<input type = "number" min = "0" max = "999999999" class = "form-control" name = "price" />
+							<input type = "number" min = "0" max = "999999999" value = "<?php echo $fetch['price']?>" class = "form-control" name = "price" />
 						</div>
 						<div class = "form-group">
 							<label>Photo </label>
 							<div id = "preview" style = "width:150px; height :150px; border:1px solid #000;">
-								<center id = "lbl">[Photo]</center>
+								<img src = "../photo/<?php echo $fetch['photo']?>" id = "lbl" width = "100%" height = "100%"/>
 							</div>
 							<input type = "file" required = "required" id = "photo" name = "photo" />
 						</div>
 						<br />
 						<div class = "form-group">
-							<button name = "add_room" class = "btn btn-info form-control"><i class = "glyphicon glyphicon-save"></i> Saved</button>
+							<button name = "edit_flight" class = "btn btn-warning form-control"><i class = "glyphicon glyphicon-edit"></i> Save Changes</button>
 						</div>
 					</form>
-					<?php require_once 'add_query_room.php'?>
+					<?php require_once 'edit_query_flight.php'?>
 				</div>
 			</div>
 		</div>

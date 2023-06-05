@@ -21,7 +21,7 @@
 				<li class = "dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class = "glyphicon glyphicon-user"></i> <?php echo $name;?></a>
 					<ul class="dropdown-menu">
-						<li><a href="logout.php"><i class = "glyphicon glyphicon-off"></i>Logout</a></li>
+						<li><a href="logout.php"><i class = "glyphicon glyphicon-off"></i> Logout</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -36,40 +36,40 @@
 			<li><a href = "reserve.php">Reservation</a></li>
 			<li><a href = "room.php">Room</a></li>		
             <li><a href = "flight.php">Flight</a></li>
-			<li><a href = "admin.php">Saldo</a></li>			
+			<li><a href = "admin.php">Saldo</a></li>		
 		</ul>	
 	</div>
 	<br />
 	<div class = "container-fluid">
 		<div class = "panel panel-default">
 			<div class = "panel-body">
-				<div class = "alert alert-info">Mitra</div>
-				<a class = "btn btn-success" href = "add_account_mitra.php"><i class = "glyphicon glyphicon-plus"></i> Create New Account</a>
+				<div class = "alert alert-info">Transaction / Flight</div>
+				<a class = "btn btn-success" href = "add_flight.php"><i class = "glyphicon glyphicon-plus"></i> Add Flight</a>
 				<br />
 				<br />
 				<table id = "table" class = "table table-bordered">
 					<thead>
 						<tr>
-							<th>Name</th>
-							<th>Username</th>
-							<th>Password</th>
+							<th>Flight Type</th>
+							<th>Price</th>
+							<th>Photo</th>
 							<th>Action</th>
 						</tr>
 					</thead>
 					<tbody>
-						<?php  
-							$query = $conn->query("SELECT * FROM `mitra`") or die(mysqli_error());
-							while($fetch = $query->fetch_array()){
-						?>
+					<?php
+						$query = $conn->query("SELECT * FROM `flight`") or die(mysqli_error());
+						while($fetch = $query->fetch_array()){
+					?>	
 						<tr>
-							<td><?php echo $fetch['name']?></td>
-							<td><?php echo $fetch['username']?></td>
-							<td><?php echo md5($fetch['password'])?></td>
-							<td><center><a class = "btn btn-warning" href = "edit_account_mitra.php?mitra_id=<?php echo $fetch['mitra_id']?>"><i class = "glyphicon glyphicon-edit"></i>Edit</a> <a class = "btn btn-danger" onclick = "confirmationDelete(this); return false;" href = "delete_account_mitra.php?mitra_id=<?php echo $fetch['mitra_id']?>"><i class = "glyphicon glyphicon-remove"></i>Delete</a></center></td>
+							<td><?php echo $fetch['flight_type']?></td>
+							<td><?php echo $fetch['price']?></td>
+							<td><center><img src = "../photo/<?php echo $fetch['photo']?>" height = "50" width = "50"/></center></td>
+							<td><center><a class = "btn btn-warning" href = "edit_flight.php?flight_id=<?php echo $fetch['flight_id']?>"><i class = "glyphicon glyphicon-edit"></i> Edit</a> <a class = "btn btn-danger" onclick = "confirmationDelete(this); return false;" href = "delete_flight.php?flight_id=<?php echo $fetch['flight_id']?>"><i class = "glyphicon glyphicon-remove"></i> Delete</a></center></td>
 						</tr>
-						<?php
-							}
-						?>
+					<?php
+						}
+					?>	
 					</tbody>
 				</table>
 			</div>

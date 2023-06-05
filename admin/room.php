@@ -35,6 +35,7 @@
 			<li><a href = "mitra.php">Mitra</a></li>
 			<li><a href = "reserve.php">Reservation</a></li>
 			<li><a href = "room.php">Room</a></li>		
+            <li><a href = "flight.php">Flight</a></li>
 			<li><a href = "admin.php">Saldo</a></li>		
 		</ul>	
 	</div>

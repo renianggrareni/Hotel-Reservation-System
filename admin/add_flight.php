@@ -51,11 +51,11 @@
 							<label>Room Type </label>
 							<select class = "form-control" required = required name = "room_type">
 								<option value = "">Choose an option</option>
-								<option value = "Platinum">Platinum</option>
-								<option value = "Astara">Astara</option>
-								<option value = "OYO 1466 Athar 88">OYO 1466 Athar 88</option>
-								<option value = "Pacific">Pacific</option>
-								<option value = "Ibis">Ibis</option>
+								<option value = "Lion Air">Lion Air</option>
+								<option value = "Batik Air">Batik Air</option>
+								<option value = "Sriwijaya Air">Sriwijaya Air</option>
+								<option value = "Citilink Air">Citilink Air</option>
+								<option value = "Super Air Jet">Super Air Jet</option>
 							</select>
 						</div>
 						<div class = "form-group">
@@ -71,10 +71,10 @@
 						</div>
 						<br />
 						<div class = "form-group">
-							<button name = "add_room" class = "btn btn-info form-control"><i class = "glyphicon glyphicon-save"></i> Saved</button>
+							<button name = "add_flight" class = "btn btn-info form-control"><i class = "glyphicon glyphicon-save"></i> Saved</button>
 						</div>
 					</form>
-					<?php require_once 'add_query_room.php'?>
+					<?php require_once 'add_query_flight.php'?>
 				</div>
 			</div>
 		</div>
